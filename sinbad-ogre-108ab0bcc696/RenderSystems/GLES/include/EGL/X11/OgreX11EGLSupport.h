@@ -35,6 +35,7 @@ THE SOFTWARE.
 
 #if (OGRE_PLATFORM == OGRE_PLATFORM_LINUX)
 	#include <X11/Xutil.h>
+	#define Status int
 	#include <X11/extensions/Xrandr.h>
 	#include <X11/Xutil.h>
 	#include <sys/time.h>

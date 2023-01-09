@@ -279,6 +279,7 @@ namespace Ogre {
 
 	void GLESFrameBufferObject::swapBuffers()
 	{
+#ifdef __MACH__
 #if GL_APPLE_framebuffer_multisample
 		if (mMultisampleFB)
 		{
@@ -291,6 +292,7 @@ namespace Ogre {
             GL_CHECK_ERROR;
 //			glBlitFramebufferEXT(0, 0, width, height, 0, 0, width, height, GL_COLOR_BUFFER_BIT, GL_NEAREST);
 		}
+#endif
 #endif
 	}
 
